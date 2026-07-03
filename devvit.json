@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "inaudite",
+  "permissions": {
+    "reddit": true,
+    "http": {
+      "domains": [
+        "*.redd.it",
+        "*.redditmedia.com",
+        "*.reddit.com",
+        "reddit.com",
+        "redd.it"
+      ]
+    }
+  },
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "game.html"
+      },
+      "game": {
+        "entry": "game.html"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "media": {
+    "dir": "assets"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Create a new post",
+        "description": "inaudite",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      },
+      {
+        "label": "Scrape r/listentothis",
+        "description": "Fetch latest music posts",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/scrape-listentothis"
+      }
+    ]
+  },
+  "triggers": {
+    "onAppInstall": "/internal/on-app-install"
+  },
+  "dev": {
+    "subreddit": "inaudite_dev"
+  }
+}
