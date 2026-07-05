@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { ScrapedPost } from '../../shared/types/api';
-import nadaLogo from '../../../assets/NADA_logo.png';
+import inauditeLogo from '../../../assets/logo.png';
 
 type DisplayMode = 'list' | 'genre';
 type View = 'browse' | 'playlist';
@@ -233,7 +233,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-zinc-950 text-white p-6">
-      <img src={nadaLogo} alt="NADA" className="h-20 w-auto object-contain mb-2 self-start" />
+      <img src={inauditeLogo} alt="Inaudite" className="h-20 w-auto object-contain mb-2 self-start" />
       <p className="text-zinc-400 mb-6">Uncover the sounds of r/listentothis</p>
 
       {allGenres.length > 0 && (
