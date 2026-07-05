@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/NADA_logo.png" alt="Inaudite logo" height="80">
+  <img src="assets/NADA_logo.png" alt="Inaudite logo" height="80">
 </p>
 
 # Inaudite
