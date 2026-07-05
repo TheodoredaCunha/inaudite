@@ -62,8 +62,6 @@ export async function scrapeListentothis(clients: { reddit: RedditAPIClient }): 
     limit: 100,
   }).all();
 
-  console.log(`From scrapeListentothis() in scrapeListentothis.ts: Scraped ${listing.length} posts from r/listentothis`);
-
   const posts = listing
     .filter((post) => !isMegathread(post.title))
     .map((post) => {

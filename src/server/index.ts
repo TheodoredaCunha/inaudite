@@ -35,7 +35,6 @@ async function ensureScrapedPosts(): Promise<ScrapedPost[]> {
 
   const posts = await scrapeListentothis({ reddit: reddit as any });
   await redis.set('scraped:listentothis', JSON.stringify(posts));
-  console.log(`From ensureScrapedPost() in index.ts: Scraped ${posts.length} posts from r/listentothis`);
   return posts;
 }
 
